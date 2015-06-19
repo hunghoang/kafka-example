@@ -44,10 +44,8 @@ public class SimpleConsumer {
 		while (it.hasNext()) {
 			MessageAndMetadata<byte[], byte[]> messageAndMetaData = it.next();
 			System.out.println("Receiving message: " + new String(messageAndMetaData.message()) + " with offset: " + messageAndMetaData.offset() + " in partition: " + messageAndMetaData.partition());
-			consumerConnector.commitOffsets();
 		}
 		
 		System.out.println("End running");
-//2520209
 	}
 }
